@@ -5,11 +5,10 @@
  from selenium.webdriver.firefox.options import Options as FirefoxOptions
  
  options = FirefoxOptions()
- options.browser_version = '79.0'
- options.platform_name = 'HS Remote'
+ options.browser_version = '116.0'
  cloud_options = {
-     "build": "",
-     "name": "",
+     "browserName": "firefox",
+     "browserVersion": "116.0",
      "headspin:capture": True,
      "headspin:initialScreenSize": {
          "width": 1920,
