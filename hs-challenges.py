@@ -7,17 +7,20 @@
  options = FirefoxOptions()
  options.browser_version = '116.0'
  cloud_options = {
-     "browserName": "firefox",
-     "browserVersion": "116.0",
      "headspin:capture": True,
      "headspin:initialScreenSize": {
          "width": 1920,
          "height": 1080
      },
+     "browserName": "firefox",
+     "browserVersion": "116.0",
  }
  options.set_capability('cloud:options', cloud_options)
  
- driver = webdriver.Remote('https://dev-id-jk-0.headspin.io:9095/v0/f4f20572809b4dc1855a6bd1ef05e861/wd/hub', options=options)
+ driver = webdriver.Remote(
+     'https://dev-id-jk-0.headspin.io:9096/v0/f4f20572809b4dc1855a6bd1ef05e861/wd/hub',
+     options=options
+ )
  try:
      wait = WebDriverWait(driver, 10)
      driver.get('https://the-internet.herokuapp.com')
